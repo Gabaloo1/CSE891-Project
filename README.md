@@ -31,7 +31,9 @@ python src/main.py --config=params.yaml
 
 Model training will be done on the GPU if available. The model will be saved in the `checkpoints/` directory and the metrics will be saved in the `metrics/` directory.
 
-_Note: Training took around 2h20min on a single RTX 3070Ti GPU._
+_Note: Training took around 2h20min on my laptop (RTX 3070Ti GPU)._
+
+**You may also download the pre-trained model from [this link](https://drive.google.com/file/d/1mLFFno3lOpVGSTPZhC__lnIifHH_APjG/view?usp=sharing). Unzip the file and place the `checkpoints/roberta-beit/checkpoint-1500` folder in the root directory of the project.**
 
 ### Inference
 
