@@ -1,0 +1,6 @@
+# pip install torch==2.1.0 torchvision==0.16.0 --index-url https://download.pytorch.org/whl/cu121
+tqdm==4.66.1
+datasets==2.14.6
+transformers==4.35.2
+torchsummary==1.5.1
+Pillow==10.0.1
