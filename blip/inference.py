@@ -19,7 +19,7 @@ with open(test_data_json, "r") as json_file:
     data = json.load(json_file)
 
 # Iterate over the test data
-for item in tqdm(data[:100], desc="Processing test data"):
+for item in tqdm(data, desc="Processing test data"):
     image_filename = item["image"]
     question = item["question"]
 
@@ -41,5 +41,10 @@ with open(csv_file_path, mode="w", newline="") as csv_file:
     csv_writer = csv.writer(csv_file)
     csv_writer.writerow(["Image", "Question", "Answer"])  # Write header
     csv_writer.writerows(results)
+
+json_file_path = "blip/results/results.json"
+with open(json_file_path, "w") as json_file:
+    entries = [{"image": image, "answer": answer} for image, _, answer in results]
+    json.dump(entries, json_file)
 
 print(f"Results saved to {csv_file_path}")
